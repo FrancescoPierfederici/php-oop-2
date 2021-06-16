@@ -7,8 +7,8 @@ class AgeValid extends Exception {
 
   private $defaultAgeMessage = "Devi inserire un numero";
 
-  function __construct($message = is_numeric()) {
-    if(empty($message)){
+  function __construct($message) {
+    if(!is_numeric($message)){
       $message = $this->defaultAgeMessage;
     }
 
